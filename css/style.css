@@ -32,9 +32,11 @@ h1 {
 }
 
 h2 {
-  color: var(--dark-turquoise);
   font-family: 'Heattenschweiler', Arial, Helvetica, sans-serif;
+  color: var(--dark-turquoise);
   letter-spacing: 1.5px;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 th {
@@ -50,8 +52,8 @@ th {
 }
 
 .nav-link {
-  border-top: 2px double transparent;
-  border-bottom: 2px double transparent;
+  border-top: 3px double transparent;
+  border-bottom: 3px double transparent;
 }
 
 .nav-link:hover {
@@ -64,12 +66,6 @@ th {
   display: none;
   float: right;
   width: 250px;
-}
-
-@media screen and (min-width: 770px) {
-  .kiwi {
-    display: block;
-  }
 }
 
 .collapse-container {
@@ -92,19 +88,28 @@ th {
 }
 
 .collapsible-trigger::before {
+  display: inline-block;
   content: '►';
   margin-left: 0.5rem;
 }
 
+.collapsible-trigger:has(+ .show)::before {
+  transform: rotate(90deg);
+}
+
 .collapse {
-  margin: 0;
   padding: 0.5rem;
   background-color: color-mix(in srgb, var(--turquoise) 25%, transparent);
-  width: 100%;
+}
+
+@media screen and (min-width: 770px) {
+  .kiwi {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .table {
-    width: 75%;
+    max-width: 75%;
   }
 }
