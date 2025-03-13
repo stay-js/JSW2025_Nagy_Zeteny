@@ -49,3 +49,15 @@ h1 {
   border-top-color: white;
   border-bottom-color: white;
 }
+
+.kiwi {
+  display: none;
+  float: right;
+  width: 250px;
+}
+
+@media screen and (min-width: 770px) {
+  .kiwi {
+    display: block;
+  }
+}
