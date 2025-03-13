@@ -67,3 +67,34 @@ h2 {
     display: block;
   }
 }
+
+.collapse-container {
+  margin-block: 0.25rem;
+  border: 1px dotted var(--turquoise);
+}
+
+.collapsible-trigger {
+  all: unset;
+  background-color: var(--turquoise);
+  color: white;
+  border: none;
+  margin: 0;
+  padding-block: 0.5rem;
+  outline: none;
+  font-weight: 700;
+  font-style: italic;
+  width: 100%;
+  overflow: hidden;
+}
+
+.collapsible-trigger::before {
+  content: '►';
+  margin-left: 0.5rem;
+}
+
+.collapse {
+  margin: 0;
+  padding: 0.5rem;
+  background-color: color-mix(in srgb, var(--turquoise) 25%, transparent);
+  width: 100%;
+}
