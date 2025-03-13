@@ -85,8 +85,9 @@ h2 {
 
 .collapsible-trigger::before {
   display: inline-block;
-  content: '►';
+  content: '\25B6';
   margin-left: 0.5rem;
+  transition: transform 200ms;
 }
 
 .collapsible-trigger:has(+ .show)::before {
@@ -96,6 +97,10 @@ h2 {
 .collapse {
   padding: 0.5rem;
   background-color: color-mix(in srgb, var(--turquoise) 25%, transparent);
+}
+
+.collapse-container * {
+  transition: none;
 }
 
 @media screen and (min-width: 770px) {
