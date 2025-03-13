@@ -12,7 +12,7 @@ header {
   background-image: url('../img/banner_fruits.png');
   background-size: cover;
   background-position: center bottom;
-  padding: 4rem;
+  padding: 2rem;
 }
 
 h1 {
@@ -29,4 +29,23 @@ h1 {
   text-shadow: 1px 1px 2px black;
   border-radius: 50%;
   border: 10px double white;
+}
+
+.navbar {
+  background-color: var(--turquoise);
+}
+
+.nav-link {
+  box-sizing: border-box;
+}
+
+.nav-link {
+  border-top: 2px double transparent;
+  border-bottom: 2px double transparent;
+}
+
+.nav-link:hover {
+  color: white;
+  border-top-color: white;
+  border-bottom-color: white;
 }
