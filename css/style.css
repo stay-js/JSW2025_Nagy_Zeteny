@@ -3,7 +3,7 @@
   --dark-turquoise: rgb(9 81 92);
   --green: rgb(73 126 23);
   --blue: rgb(31 83 143);
-  --purple: rgb(31 83 143);
+  --purple: rgb(64 31 100);
   --red: rgb(151 23 23);
 }
 
@@ -39,10 +39,6 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
-th {
-  background-color: #212528 !important;
-  color: white !important;
-}
 .navbar {
   background-color: var(--turquoise);
 }
@@ -112,4 +108,47 @@ th {
   .table {
     max-width: 75%;
   }
+}
+
+@media screen and (min-width: 992px) {
+  #kalkulator {
+    max-width: 50%;
+  }
+}
+
+.output-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-block: 2rem;
+  gap: 1rem;
+}
+
+.output-item {
+  border-radius: 10px;
+  outline: 3px solid var(--_bg);
+  outline-offset: 3px;
+  background-color: var(--_bg);
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.output-item:nth-child(1) {
+  --_bg: var(--green);
+}
+
+.output-item:nth-child(2) {
+  --_bg: var(--blue);
+}
+
+.output-item:nth-child(3) {
+  --_bg: var(--turquoise);
+}
+
+.output-item:nth-child(4) {
+  --_bg: var(--purple);
+}
+
+.output-item:nth-child(5) {
+  --_bg: var(--red);
 }
